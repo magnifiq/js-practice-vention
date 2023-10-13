@@ -1,11 +1,8 @@
 const sortPowNumbers = (arr) => {
-  const powArr = [];
-  arr.forEach((element) => {
-    const powNum = Math.pow(element, 2);
-    powArr.push(powNum);
-  });
+  let powArr = []
+  powArr = arr.map((el) => el * el)
 
-  return powArr.sort((a, b) => a - b);
-};
+  return powArr.sort((a, b) => a - b)
+}
 
-module.exports = sortPowNumbers;
+module.exports = sortPowNumbers
