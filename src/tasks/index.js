@@ -4,8 +4,9 @@
     See how forEach works and repeat this behavior for the array that will be passed in the array parameter
  */
 function forEach(array, fn) {
+  const lenArr=array.length
   // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < lenArr; i++) {
     fn(array[i], i, array);
   }
 }
@@ -16,12 +17,7 @@ function forEach(array, fn) {
     See how map works and repeat this behavior for the array that will be passed in the array parameter
  */
 function map(array, fn) {
-  const output = [];
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < array.length; i++) {
-    output.push(fn(array[i], i, array));
-  }
-  return output;
+  return array.map((element, index) => fn(element, index, array));
 }
 /*
  Task 3:
